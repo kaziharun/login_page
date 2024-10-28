@@ -22,7 +22,12 @@ Single Page login applications
     ```
 
 3. **Set up environment variables:**
-    - Modify the `.env` file to set up database connection.
+    - Copy .env.dist to .env.local.
+    - Modify the .env.local file to configure the database connection.
+    - Generate a new secret key:
+    ```bash
+    php bin/console secrets:generate-keys
+    ```
 
 
 4. **Database Setup:**
@@ -31,7 +36,7 @@ Single Page login applications
     php bin/console doctrine:migrations:migrate
     ```
    
-5. **Seeder :**
+5. **Load Seed Data:**
     ```bash
     php bin/console doctrine:fixtures:load
     ```
@@ -52,3 +57,5 @@ Provide instructions on how to use the application or any relevant usage informa
 1. **User Access:**
    - User: `tom@email.com`
    - Password: `user123`
+   
+Feel free to explore and test the login functionality.
